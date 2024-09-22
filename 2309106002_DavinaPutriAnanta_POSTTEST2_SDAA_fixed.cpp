@@ -3,24 +3,18 @@
 #include <limits>
 
 using namespace std;
-
-// Struct untuk mendefinisikan data workout
 struct Workout {
     string namaWorkout;
-    int durasiMenit; // Durasi dalam menit
+    int durasiMenit; 
     int kaloriTerbakar;
-    string hari; // Menyimpan hari workout
-    string minggu; // Menyimpan minggu workout
+    string hari; 
+    string minggu; 
 };
-
-// Maksimum jumlah program workout yang bisa dimasukkan
 const int MAX_WORKOUT = 100;
 
-// Deklarasi array
 Workout daftarWorkout[MAX_WORKOUT];
 int jumlahWorkout = 0;
 
-// Prosedur untuk menambahkan program workout
 void tambahWorkout() {
     if (jumlahWorkout < MAX_WORKOUT) {
         cout << "Masukkan Nama Workout: ";
@@ -64,8 +58,6 @@ void tambahWorkout() {
         cout << "Tidak bisa menambah lagi, daftar sudah penuh!" << endl;
     }
 }
-
-// Fungsi untuk menampilkan semua workout
 void tampilkanWorkout() {
     if (jumlahWorkout == 0) {
         cout << "Belum ada program workout." << endl;
@@ -82,8 +74,6 @@ void tampilkanWorkout() {
         }
     }
 }
-
-// Prosedur untuk menghapus workout berdasarkan index
 void hapusWorkout(int index) {
     if (index >= 0 && index < jumlahWorkout) {
         for (int i = index; i < jumlahWorkout - 1; i++) {
@@ -95,8 +85,6 @@ void hapusWorkout(int index) {
         cout << "Indeks tidak valid!" << endl;
     }
 }
-
-// Fungsi untuk mengupdate workout berdasarkan index
 void updateWorkout(int index) {
     if (index >= 0 && index < jumlahWorkout) {
         cout << "Update Nama Workout: ";
